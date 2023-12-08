@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+ "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	<!-- JDBC Database connection settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/groupby</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">sql22</property>
+
+	<!-- JDBC connection pool settings ... using built-in test pool -->
+		<property name="connection.pool_size">10</property>
+
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- Select our SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- Echo the SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+		 <mapping class="Org.hibernate.Teacher"/>
+		 <mapping class="Org.hibernate.Student"/> 
+		 <mapping class="Org.hibernate1.Customer"/> 
+		 <mapping class="Org.hibernate1.Items"/> 
+		 <mapping class="groupBy.Students"/>
+		 
+		 
+		 
+
+	</session-factory>
+
+</hibernate-configuration>

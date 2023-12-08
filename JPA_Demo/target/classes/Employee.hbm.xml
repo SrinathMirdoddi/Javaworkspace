@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.motivity.model.Employee" table="EMPLOYEE">
+		<meta attribute="class-description">
+			This class consists the employee information.
+		</meta>
+		<id name="eid" column="eid">
+			<generator class="assigned" />
+		</id>
+		<property name="ename"/>
+		<property name="salary"/>
+	</class>
+</hibernate-mapping>
